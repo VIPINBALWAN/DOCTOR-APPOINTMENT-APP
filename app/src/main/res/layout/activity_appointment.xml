@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_green"
+    android:padding="5dp"
+    tools:context=".AppointmentActivity"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/dark_green"
+        android:orientation="vertical">
+
+        <!-- ImageView -->
+        <ImageView
+            android:id="@+id/ImgApp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="32dp"
+            android:background="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <!-- Name TextView -->
+        <TextView
+            android:id="@+id/txtAppName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:background="#FFFFFF"
+            android:padding="10dp"
+            android:text="Name"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ImgApp" />
+
+        <!-- Surname TextView -->
+        <TextView
+            android:id="@+id/txtAppSurname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:background="#FFFFFF"
+            android:padding="10dp"
+            android:text="Surname"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtAppName" />
+
+        <!-- Age TextView -->
+
+        <!-- Field TextView -->
+        <TextView
+            android:id="@+id/txtAppAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:background="#FFFFFF"
+            android:padding="10dp"
+            android:text="Age"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtAppSurname" />
+
+        <TextView
+            android:id="@+id/txtAppField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:background="#FFFFFF"
+            android:padding="10dp"
+            android:text="Field"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtAppAge" />
+
+
+        <TextView
+            android:id="@+id/hospitalname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:background="#FFFFFF"
+            android:padding="10dp"
+            android:text="Hospital name"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtAppField"/>
+        <TextView
+            android:id="@+id/hospitaladdress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:background="#FFFFFF"
+            android:padding="10dp"
+            android:text="Hospital Address"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hospitalname"/>
+
+        <TextView
+            android:id="@+id/hospitalurl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:background="#FFFFFF"
+            android:padding="10dp"
+            android:text="Hospital location url"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hospitaladdress"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+            <ImageButton
+                android:id="@+id/btnSelectDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FFFFFF"
+                app:layout_constraintBottom_toBottomOf="@+id/btnSelectHour"
+                app:layout_constraintStart_toEndOf="@+id/btnSelectHour"
+                app:srcCompat="@drawable/ic_appointment_date" />
+            <TextView
+                android:layout_marginTop="17dp"
+                android:id="@+id/selecteddate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="#FFFFFF"
+                android:padding="5dp"
+                android:layout_gravity="center"
+                android:text="selected date"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="16sp"
+           />
+        </LinearLayout>
+    <!-- Time selection buttons -->
+        <GridLayout
+            android:id="@+id/time_selection_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:layout_marginLeft="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/materialCardView"
+            app:layout_constraintEnd_toEndOf="@+id/materialCardView">
+
+            <Button
+                android:id="@+id/btn_9am"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9:00 AM-10:00 AM"
+                android:backgroundTint="@color/purple"/>
+
+            <Button
+                android:id="@+id/btn_10am"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10:00 AM-11:00 AM"
+                android:backgroundTint="@color/purple"/>
+
+            <Button
+                android:id="@+id/btn_11am"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="11:00 AM-12:00 PM"
+                android:backgroundTint="@color/purple"/>
+
+            <Button
+                android:id="@+id/btn_12pm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12:00 PM-1:00 PM"
+                android:backgroundTint="@color/purple"/>
+
+            <Button
+                android:id="@+id/btn_2pm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2:00 PM - 3:00 PM"
+                android:backgroundTint="@color/purple"/>
+
+            <Button
+                android:id="@+id/btn_3pm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3:00 PM - 4:00 PM"
+                android:backgroundTint="@color/purple"/>
+
+            <Button
+                android:id="@+id/btn_4pm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4:00 PM - 5:00 PM"
+                android:backgroundTint="@color/purple"/>
+
+            <Button
+                android:id="@+id/btn_5pm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5:00 PM - 6:00 PM"
+                android:backgroundTint="@color/purple"/>
+
+            <!-- Add a dummy button to fill the empty space -->
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                />
+
+        </GridLayout>
+
+        <Button
+            android:id="@+id/btnMakeApp"
+            android:backgroundTint="@color/purple"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:text="Make an Appointment"
+            app:icon="@drawable/ic_savebutton"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/materialCardView" />
+
+        <EditText
+            android:id="@+id/editTxtAppNote"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:width="50dp"
+            android:ems="10"
+            android:gravity="top"
+            android:hint="Enter your note."
+            android:inputType="textMultiLine"
+            android:maxLines="5"
+            android:singleLine="false"
+            android:textColor="#000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </LinearLayout>
+</ScrollView>
